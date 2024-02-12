@@ -1,11 +1,11 @@
 <template>
-  <div>
+    <div>
 
-  </div>
+    </div>
 </template>
 
 <script setup>
-const balls = []
+
 </script>
 
 <style scoped>
