@@ -1,13 +1,15 @@
-//https://www.strandbooks.com/metaList/bestsellers
-
 <template>
   <div>
-
+    <BookCard v-for="book in books"
+    :key="book.title"
+    :Book="book"
+    />
   </div>
 </template>
 
 <script setup>
-const balls = [
+import BookCard from '@/components/BookCard.vue'
+const books = [
   {
     title: "Everything I Know About Love: A Memoir",
     author: "Dolly Alderton",
