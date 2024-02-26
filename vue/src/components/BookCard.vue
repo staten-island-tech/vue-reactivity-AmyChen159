@@ -1,9 +1,10 @@
 <template>
-    <div>
-        <h1>{{ Book.name }}</h1>
+    <div class="details">
+        <h2>{{ Book.title }}</h2>
+        <h3>By: {{ Book.author }}</h3>
         <img :src="Book.img" alt="" />
-        <h2>{{ clicked }}</h2>
-        <button @click="increment">Click Me !</button>
+        <h3>{{ clicked }}</h3>
+        <button @click="increment">Add to Cart</button>
     </div>
 </template>
 
@@ -21,8 +22,11 @@ function increment() {
 
 <style scoped>
 img { 
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  align-items: center;
 }
 </style>
