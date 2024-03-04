@@ -4,12 +4,13 @@
       :Item="item">
       </CoolCart>
     </div>
-  
   </template>
   
   <script setup>
-import CoolCart from '@/components/CoolCart.vue';
+
+  import CoolCart from '@/components/CoolCart.vue';
   import { useCart } from '@/stores/cart.js';
+
   const store = useCart()
 
   </script>

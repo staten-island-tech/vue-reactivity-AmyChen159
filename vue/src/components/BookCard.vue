@@ -4,8 +4,8 @@
         <h3>By: {{ Book.author }}</h3>
         <img :src="Book.img" alt="" />
         <h3>Price: {{ Book.price }}</h3>
-        <h3>{{ clicked }} Item(s) in Cart</h3>
-        <button @click="addCart">Add to Cart</button>
+        <h3>{{ Book.clicked }} Item(s) in Cart</h3>
+        <button @click="addCart(Book)">Add to Cart</button>
     </div> 
 </template>
 
@@ -19,9 +19,9 @@ const props = defineProps({
 });
 
 function addCart(Item) {
-  Item.value++;
-  store.value.push(Item);
-  console.log(store.value);
+  Item.clicked++;
+  store.cart.push(Item);
+  console.log(store.cart);
 }
 </script>
 
