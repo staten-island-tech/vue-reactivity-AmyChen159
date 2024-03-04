@@ -20,7 +20,7 @@ const cart = ref([]);
 
 function addCart() {
   clicked.value++;
-  cart.value.push(props.Book);
+  cart.value.push(Book);
   console.log(cart.value);
 }
 </script>

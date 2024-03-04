@@ -1,14 +1,14 @@
 <template>
     <div class="cart-gallery">
-      <Cart v-for="item in store.cart"
+      <CoolCart v-for="item in store.cart"
       :Item="item">
-      </Cart>
+      </CoolCart>
     </div>
   
   </template>
   
   <script setup>
-  import Cart from '@components/Cart.vue';
+import CoolCart from '@/components/CoolCart.vue';
   import { useCart } from '@/stores/cart.js';
   const store = useCart()
 
