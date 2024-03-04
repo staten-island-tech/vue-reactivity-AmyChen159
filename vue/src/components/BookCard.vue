@@ -10,18 +10,18 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { useCart } from '@/stores/cart.js';
+
+const store = useCart();
+
 const props = defineProps({
   Book: Object,
 });
 
-const clicked = ref(0);
-const cart = ref([]);
-
-function addCart() {
-  clicked.value++;
-  cart.value.push(Book);
-  console.log(cart.value);
+function addCart(Item) {
+  Item.value++;
+  store.value.push(Item);
+  console.log(store.value);
 }
 </script>
 
