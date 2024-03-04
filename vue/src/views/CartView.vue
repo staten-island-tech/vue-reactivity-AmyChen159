@@ -1,19 +1,17 @@
 <template>
     <div class="cart-gallery">
-      <Cart v-for="item in cartItems"
-      :key="cartItems.title"
-      :Item="item"
-      />
+      <Cart v-for="item in store.cart"
+      :Item="item">
+      </Cart>
     </div>
   
   </template>
   
   <script setup>
   import Cart from '@components/Cart.vue';
-  import { cart } from '@/stores/cart.js';
-  import { computed } from 'vue';
+  import { useCart } from '@/stores/cart.js';
+  const store = useCart()
 
-  const cartItems = computed(() => cart.value);
   </script>
   
   <style scoped>
