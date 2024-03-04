@@ -1,14 +1,16 @@
 <template>
-  <div>
+  <div class="gallery">
     <BookCard v-for="book in books"
     :key="book.title"
     :Book="book"
     />
   </div>
+
 </template>
 
 <script setup>
 import BookCard from '@/components/BookCard.vue'
+
 const books = [
   {
     title: "Everything I Know About Love: A Memoir",
@@ -19,7 +21,7 @@ const books = [
     img: "./book1.jpg",
   },
   {
-    title: "Good Material: A novel",
+    title: "Good Material: A Novel",
     author: "Dolly Alderton",
     version: "Hardcover",
     price: "$28.00",
@@ -130,9 +132,16 @@ const books = [
     genres: "Self-help book",
     img: "./book15.jpg",
   },
-]
+];
+
 </script>
 
 <style scoped>
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  
+}
 </style>
