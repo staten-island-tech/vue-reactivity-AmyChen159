@@ -19,10 +19,12 @@ const props = defineProps({
 });
 
 function addCart(Item) {
+  if (Item.clicked === 0) {
+    store.cart.push(Item);
+  }
   Item.clicked++;
-  store.cart.push(Item);
-  console.log(store.cart);
 }
+
 </script>
 
 <style scoped>

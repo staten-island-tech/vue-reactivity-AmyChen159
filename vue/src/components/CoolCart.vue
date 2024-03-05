@@ -1,6 +1,6 @@
 <template>
    <div class="cart">
-      <h2>{{ Item.title }} - {{ Item.price }}</h2>
+      <h2>{{ Item.title }} - {{ Item.price }} x{{ Item.clicked }}</h2>
   </div>
 </template>
   
